@@ -48,3 +48,4 @@ fi
 
 ls -la "$HOME/.azure" | grep -E 'msal_token_cache|service_principal' || true
 .cienv/bin/python .github/scripts/check_keyring_encryption.py login.err
+.cienv/bin/python .github/scripts/check_keyring_readback.py "$PWD/.cienv/bin/az"
